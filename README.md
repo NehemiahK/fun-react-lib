@@ -1,5 +1,3 @@
-<img src ="docs/images/aReactLib.png" alt="logo" />
-
 ## fun-react-lib
 
 A React Library created for fun and learning
