@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/NehemiahK/fun-react-lib/static/css/main.b0a76f3b.chunk.css",
-    "main.js": "/NehemiahK/fun-react-lib/static/js/main.832a4f9c.chunk.js",
-    "main.js.map": "/NehemiahK/fun-react-lib/static/js/main.832a4f9c.chunk.js.map",
-    "runtime-main.js": "/NehemiahK/fun-react-lib/static/js/runtime-main.8750a753.js",
-    "runtime-main.js.map": "/NehemiahK/fun-react-lib/static/js/runtime-main.8750a753.js.map",
-    "static/js/2.eb6a94e3.chunk.js": "/NehemiahK/fun-react-lib/static/js/2.eb6a94e3.chunk.js",
-    "static/js/2.eb6a94e3.chunk.js.map": "/NehemiahK/fun-react-lib/static/js/2.eb6a94e3.chunk.js.map",
-    "index.html": "/NehemiahK/fun-react-lib/index.html",
-    "precache-manifest.8db1ec7a4666dfbd80136d53cbc891b0.js": "/NehemiahK/fun-react-lib/precache-manifest.8db1ec7a4666dfbd80136d53cbc891b0.js",
-    "service-worker.js": "/NehemiahK/fun-react-lib/service-worker.js",
-    "static/css/main.b0a76f3b.chunk.css.map": "/NehemiahK/fun-react-lib/static/css/main.b0a76f3b.chunk.css.map",
-    "static/js/2.eb6a94e3.chunk.js.LICENSE.txt": "/NehemiahK/fun-react-lib/static/js/2.eb6a94e3.chunk.js.LICENSE.txt",
-    "static/media/heading.md": "/NehemiahK/fun-react-lib/static/media/heading.1107bdd4.md",
-    "static/media/simple-button.md": "/NehemiahK/fun-react-lib/static/media/simple-button.38c5f1e1.md"
+    "main.css": "/fun-react-lib/static/css/main.b0a76f3b.chunk.css",
+    "main.js": "/fun-react-lib/static/js/main.40f9958d.chunk.js",
+    "main.js.map": "/fun-react-lib/static/js/main.40f9958d.chunk.js.map",
+    "runtime-main.js": "/fun-react-lib/static/js/runtime-main.221fcc95.js",
+    "runtime-main.js.map": "/fun-react-lib/static/js/runtime-main.221fcc95.js.map",
+    "static/js/2.eb6a94e3.chunk.js": "/fun-react-lib/static/js/2.eb6a94e3.chunk.js",
+    "static/js/2.eb6a94e3.chunk.js.map": "/fun-react-lib/static/js/2.eb6a94e3.chunk.js.map",
+    "index.html": "/fun-react-lib/index.html",
+    "precache-manifest.bc61e4e3e1d2e00a58015798c1c33b51.js": "/fun-react-lib/precache-manifest.bc61e4e3e1d2e00a58015798c1c33b51.js",
+    "service-worker.js": "/fun-react-lib/service-worker.js",
+    "static/css/main.b0a76f3b.chunk.css.map": "/fun-react-lib/static/css/main.b0a76f3b.chunk.css.map",
+    "static/js/2.eb6a94e3.chunk.js.LICENSE.txt": "/fun-react-lib/static/js/2.eb6a94e3.chunk.js.LICENSE.txt",
+    "static/media/heading.md": "/fun-react-lib/static/media/heading.1107bdd4.md",
+    "static/media/simple-button.md": "/fun-react-lib/static/media/simple-button.38c5f1e1.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.8750a753.js",
+    "static/js/runtime-main.221fcc95.js",
     "static/js/2.eb6a94e3.chunk.js",
     "static/css/main.b0a76f3b.chunk.css",
-    "static/js/main.832a4f9c.chunk.js"
+    "static/js/main.40f9958d.chunk.js"
   ]
 }
