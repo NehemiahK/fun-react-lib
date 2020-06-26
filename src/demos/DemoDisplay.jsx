@@ -15,9 +15,7 @@ const switchTo = (componentName) => {
 }
 
 const DemoDisplay = (props) => {
-    return (<div className='demo-display'>
-        {switchTo(props.demo)}
-    </div>)
+    return <div className="demo-display">{switchTo(props.demo)}</div>
 }
 
 export default DemoDisplay

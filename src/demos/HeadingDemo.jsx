@@ -7,15 +7,18 @@ const HeadingDemo = () => {
     const [markdown, setMarkdown] = useState('')
 
     useEffect(() => {
-        fetch(simpleButtonPath).then((response) => response.text()).then((text) => {
-            setMarkdown(text)
-        })
+        fetch(simpleButtonPath)
+            .then((response) => response.text())
+            .then((text) => {
+                setMarkdown(text)
+            })
     })
 
-    return (<>
-        <ReactMarkdown source={markdown} />
-        <Heading type='h3'> I'm an h3 header </Heading>
-    </>
+    return (
+        <>
+            <ReactMarkdown source={markdown} />
+            <Heading type="h3"> I'm an h3 header </Heading>
+        </>
     )
 }
 

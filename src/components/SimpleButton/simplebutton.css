@@ -6,27 +6,27 @@
 }
 
 /*colors*/
-.simple-button.red{
+.simple-button.red {
     background: red;
 }
 
-.simple-button.blue{
+.simple-button.blue {
     background: blue;
 }
 
-.simple-button.black{
+.simple-button.black {
     background: red;
 }
 
 /*sizes*/
-.simple-button.sm{
+.simple-button.sm {
     font-size: 16px;
 }
 
-.simple-button.md{
+.simple-button.md {
     font-size: 20px;
 }
 
-.simple-button.lg{
+.simple-button.lg {
     font-size: 24px;
 }

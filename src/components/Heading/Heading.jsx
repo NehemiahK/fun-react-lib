@@ -18,7 +18,7 @@ const switchHeading = (type, children) => {
 }
 
 const Heading = (props) => {
-    return (<>{switchHeading(props.type, props.children)}</>)
+    return <>{switchHeading(props.type, props.children)}</>
 }
 
 Heading.defaultProps = {
