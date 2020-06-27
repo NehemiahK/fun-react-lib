@@ -8,7 +8,7 @@ function App() {
   const [demo, setDemo] = useState('')
 
   return (
-    <div className="App">
+    <div className="docs">
       <ComponentList setDemo={setDemo} />
       <DemoDisplay demo={demo} />
     </div>
