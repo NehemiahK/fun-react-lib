@@ -1,15 +1,20 @@
 import React from "react";
-import "./Navbar.css";
-import RightNav from "./RightNav";
+import './style.scss';
 
 const Navbar = () => {
     return(
-        <div className="nav">
-            <div className="logo">
-                Fun React Lib
+        <nav>
+            <div className="container">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
             </div>
-            <RightNav/>
-        </div>
+            <ul className="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
     )
 };
 
