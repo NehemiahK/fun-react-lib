@@ -13,7 +13,7 @@ const switchTo = (componentName) => {
       return '';
   }
 };
-
+           
 const DemoDisplay = (props) => {
   return <div className="demo-display">{switchTo(props.demo)}</div>;
 };
