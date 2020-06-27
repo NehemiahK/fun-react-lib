@@ -5,7 +5,7 @@ import './avatar.css'
 
 const Avatar = (props) => {
     return (
-        <div className={`avatar ${props.size}`}>
+        <div className={`avatar ${props.size} ${props.className}`}>
             {props.src && <img className={`avatar ${props.size}`} alt={props.name} src={props.src} />}
             {props.name && !props.src && <span className={`avatar ${props.size}`}>{props.name}</span>}
         </div>
