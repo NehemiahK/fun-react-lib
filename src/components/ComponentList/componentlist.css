@@ -1,12 +1,12 @@
 .component-list {
-    display: flex;
-    flex-direction: column;
-    border-right: 3px black solid;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 3px black solid;
+  height: 100vh;
 }
 
 .component-list button {
-    all: unset;
-    border-bottom: 1px black solid;
-    margin-bottom: 5px;
+  all: unset;
+  border-bottom: 1px black solid;
+  margin-bottom: 5px;
 }

@@ -1,32 +1,32 @@
 .simple-button {
-    padding: 10px 15px;
-    border: none;
-    color: white;
-    border-radius: 6px;
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  border-radius: 6px;
 }
 
 /*colors*/
 .simple-button.red {
-    background: red;
+  background: red;
 }
 
 .simple-button.blue {
-    background: blue;
+  background: blue;
 }
 
 .simple-button.black {
-    background: red;
+  background: red;
 }
 
 /*sizes*/
 .simple-button.sm {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .simple-button.md {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .simple-button.lg {
-    font-size: 24px;
+  font-size: 24px;
 }
