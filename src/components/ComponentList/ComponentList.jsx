@@ -2,7 +2,7 @@ import React from 'react'
 import './componentlist.css'
 
 /*Add your component name to the array */
-const components = ['Simple Button', 'Heading']
+const components = ['Avatar', 'Simple Button', 'Heading']
 
 const ComponentList = (props) => {
     return (<div className='component-list'>
