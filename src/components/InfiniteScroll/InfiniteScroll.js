@@ -9,8 +9,11 @@ const InfiniteScroll = ({
 	loadingComponent = null,
 	errorComponent = null,
 }) => {
+	const observerNode = useRef();
 	return (
 		<div>
+			{children}
+			<div id="infinite-scrolling-observer" ref={observerNode}></div>
 		</div>
 	);
 };
