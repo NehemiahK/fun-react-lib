@@ -1,19 +1,15 @@
 import React from "react";
 import './style.scss';
 
-const Navbar = () => {
+
+function Navbar({navLinks, background, hoverBackground, linkColor, logo}) {
+    // const [hoverIndex, setHoverIndex] = useState(-1);
+    // const [ navOpen, setNavOpen ] = useState(false);
+
+
     return(
-        <nav>
-            <div className="container">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>
-            <ul className="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+        <nav className="responsive-toolbar" style={{background: background || '#333'}}>
+
         </nav>
     )
 };
