@@ -15,7 +15,7 @@ const getUsers = async (currentPage, results) => {
 const useFetchUsers = initialState => {
 	const [data, setData] = useState(initialState.data);
 	const [page, setPage] = useState(initialState.page);
-	const [hasMore, setHasMore] = useState(initialState.page);
+	const [hasMore, setHasMore] = useState(initialState.hasMore);
 	const [isLoading, setIsLoading] = useState(initialState.isLoading);
 	const [isError, setIsError] = useState(initialState.isError);
 
