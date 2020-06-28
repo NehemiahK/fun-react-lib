@@ -1,21 +1,27 @@
-import React from 'react';
-import './demodisplay.css';
-/*add your demo in the import statement below */
-import { SimpleButtonDemo, HeadingDemo } from '../exports/exports';
+import React from 'react'
 
-const switchTo = (componentName) => {
-  switch (componentName) {
-    case 'Simple Button':
-      return <SimpleButtonDemo />;
-    case 'Heading':
-      return <HeadingDemo />;
-    default:
-      return '';
-  }
-};
-           
+const importView = DemoComponentName =>
+  React.lazy(() =>
+    import(`./${DemoComponentName || "SimpleButton"}Demo`).catch((e) => console.log("demo component not exported"))
+  );
+
 const DemoDisplay = (props) => {
-  return <div className="demo-display">{switchTo(props.demo)}</div>;
-};
+  const [views, setViews] = React.useState();
+
+  React.useEffect(() => {
+    async function loadViews() {
+      const View = await importView(props.demo);
+      setViews(<View />)
+    }
+    loadViews();
+
+  }, [props.demo]);
+
+  return (
+    <React.Suspense fallback='Loading views...'>
+      <div className='docs-content markdown-body'>{views}</div>
+    </React.Suspense>
+  )
+}
 
 export default DemoDisplay;
