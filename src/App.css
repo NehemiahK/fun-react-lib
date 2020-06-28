@@ -24,15 +24,21 @@
 
 .docs-nav-header span {
     font-size: 18px;
-    padding: 10px 6px;
+    letter-spacing: 1px;
+    margin: 20px 0 18px 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .docs-nav-header input {
     background: rgba(214, 214, 214, 0.5);
     border: none;
     letter-spacing: 1px;
-    padding: 10px 14px;
+    padding: 14px;
     margin-bottom: 5px;
+    height: 40px;
+    color: #a49d98;
+    font-size: 15px;
 }
 
 .docs-nav-list span {
