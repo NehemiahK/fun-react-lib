@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const switchHeading = (type, children) => {
     switch (type) {
@@ -25,4 +25,4 @@ Heading.defaultProps = {
     type: 'h2',
 };
 
-export default Heading
+export default Heading;
