@@ -10,6 +10,46 @@ const getUsers = async (currentPage, results) => {
 	return data.results;
 };
 
+const useFetchUsers = initialState => {
+	const [data, setData] = useState(initialState.data);
+	const [page, setPage] = useState(initialState.page);
+	const [hasMore, setHasMore] = useState(initialState.page);
+	const [isLoading, setIsLoading] = useState(initialState.isLoading);
+	const [isError, setIsError] = useState(initialState.isError);
+
+	useEffect(() => {
+		let cancel = false;
+
+		setIsLoading(true);
+		setIsError(false);
+
+		getUsers(page, 10)
+			.then(res => {
+				if (!cancel) {
+					setData(data => data.concat(res));
+					setIsLoading(false);
+					setIsError(false);
+					setHasMore(true);
+				}
+			})
+			.catch(() => {
+				setIsError(true);
+				setIsLoading(false);
+			});
+
+		return () => {
+			cancel = true;
+		};
+	}, [page]);
+
+	return {
+		data,
+		setPage,
+		hasMore,
+		isLoading,
+		isError,
+	};
+};
 const InfiniteScrollDemo = () => {
 	const [markdown, setMarkdown] = useState('');
 
