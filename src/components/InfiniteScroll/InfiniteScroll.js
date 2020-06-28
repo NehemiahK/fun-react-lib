@@ -14,6 +14,8 @@ const InfiniteScroll = ({
 		<div>
 			{children}
 			<div id="infinite-scrolling-observer" ref={observerNode}></div>
+			{isLoading && loadingComponent}
+			{isError && errorComponent}
 		</div>
 	);
 };
