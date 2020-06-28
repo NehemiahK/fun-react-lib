@@ -14,6 +14,9 @@ const switchHeading = (type, children) => {
             return <h5>{children}</h5>;
         case 'h6':
             return <h6>{children}</h6>
+        
+        default: 
+            // do nothing
     }
 };
 
