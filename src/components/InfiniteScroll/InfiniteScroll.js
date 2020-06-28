@@ -10,6 +10,30 @@ const InfiniteScroll = ({
 	errorComponent = null,
 }) => {
 	const observerNode = useRef();
+
+	useEffect(() => {
+		if (isLoading || isError) {
+			return;
+		}
+
+		const observer = new IntersectionObserver(
+			entries => {
+				if (entries[0].isIntersecting && hasMore) {
+					triggerFunction();
+				}
+			},
+			{
+				rootMargin: '10% 0px 10% 0px',
+			}
+		);
+
+		observer.observe(observerNode.current);
+
+		return () => {
+			observer.disconnect();
+		};
+	}, [isLoading, isError, hasMore, triggerFunction, observerNode]);
+
 	return (
 		<div>
 			{children}
