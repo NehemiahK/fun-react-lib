@@ -8,6 +8,7 @@ import Blog from "./components/Pages/Blog";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import {Router} from "@reach/router";
+import logo from './logo.svg';
 
 function App() {
     const navLinks = [
@@ -31,14 +32,14 @@ function App() {
             path: '/blog',
             icon: 'ion-ios-bonfire'
         }
-    ]
+    ];
 
 
     const [demo, setDemo] = useState('');
 
   return (
     <div className="App">
-        <Navbar navLinks={navLinks} />
+        <Navbar navLinks={navLinks} logo={logo}/>
         <Router>
             <Home path="/Home"/>
             <Blog path="/Blog"/>
