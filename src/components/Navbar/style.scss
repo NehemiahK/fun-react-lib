@@ -1,11 +1,11 @@
-nav{
+nav {
   display: flex;
   align-items: center;
   width: 100vw;
   height: 4em;
   background-color: #5b78c7;
 
-  .nav-links{
+  .nav-links {
     display: flex;
     list-style: none;
     width: 50%;
@@ -13,11 +13,10 @@ nav{
     justify-content: space-around;
     align-items: center;
     margin-left: auto;
-    & li a{
+    & li a {
       color: #ffffff;
       text-decoration: none;
       font-size: 16px;
-
     }
   }
 }
