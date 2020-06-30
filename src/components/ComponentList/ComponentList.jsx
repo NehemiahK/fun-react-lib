@@ -1,5 +1,5 @@
-import React from 'react'
-import * as library from "./../"
+import React from 'react';
+import * as library from './../';
 
 const ComponentList = (props) => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -10,7 +10,7 @@ const ComponentList = (props) => {
   }
 
   return (
-    <section className='docs-nav'>
+    <section className="docs-nav">
       <div className="docs-nav-header">
         <span>Components</span>
         <input type="search" placeholder="Search Component" />
@@ -19,7 +19,7 @@ const ComponentList = (props) => {
         {Object.keys(library).map(lib => <span className={urlParams.get('c') === lib ? "active" : ""} key={lib} onClick={() => handleMenuClick(lib)}>{lib}</span>)}
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default ComponentList;

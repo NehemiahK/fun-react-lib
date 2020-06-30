@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const importView = DemoComponentName =>
+const importView = (DemoComponentName) =>
   React.lazy(() =>
     import(`./${DemoComponentName}`).catch((e) => console.log("demo component not exported"))
   );
@@ -18,14 +18,13 @@ const DemoDisplay = (props) => {
       setViews(<View />)
     }
     loadViews();
-
   }, [props.demo]);
 
   return (
     <React.Suspense fallback={<div className="loadWrapper"><div className="loader" /></div>}>
       <div className='docs-content markdown-body'>{views}</div>
     </React.Suspense>
-  )
-}
+  );
+};
 
 export default DemoDisplay;
