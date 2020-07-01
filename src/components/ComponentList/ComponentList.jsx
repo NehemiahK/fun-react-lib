@@ -1,9 +1,9 @@
-
-
 /*Add your component name to the array */
-const components = ['Simple Button', 'Heading', 'Progress Bar']
+
 import React from 'react';
 import * as library from './../';
+
+const components = ['Simple Button', 'Heading', 'Progress Bar'];
 
 const ComponentList = (props) => {
   return (
