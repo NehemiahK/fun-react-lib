@@ -6,8 +6,8 @@ const ComponentList = (props) => {
 
   const handleMenuClick = (menuName) => {
     window.history.replaceState(null, null, `?c=${menuName}`);
-    props.setDemo(menuName)
-  }
+    props.setDemo(menuName);
+  };
 
   return (
     <section className="docs-nav">
@@ -16,7 +16,15 @@ const ComponentList = (props) => {
         <input type="search" placeholder="Search Component" />
       </div>
       <div className="docs-nav-list">
-        {Object.keys(library).map(lib => <span className={urlParams.get('c') === lib ? "active" : ""} key={lib} onClick={() => handleMenuClick(lib)}>{lib}</span>)}
+        {Object.keys(library).map((lib) => (
+          <span
+            className={urlParams.get('c') === lib ? 'active' : ''}
+            key={lib}
+            onClick={() => handleMenuClick(lib)}
+          >
+            {lib}
+          </span>
+        ))}
       </div>
     </section>
   );
