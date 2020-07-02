@@ -23,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,css,html,scss}\"",
-    "format:check": "prettier -c \"src/**/*.{js,jsx,css,html,scss}\""
+    "format:check": "prettier -c \"src/**/*.{js,jsx,css,html,scss}\"",
+    "gen": "plop",
+    "gen:c": "plop component"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "plop": "^2.7.1"
   }
 }

@@ -83,3 +83,16 @@ That's it, you've made a pull request.
 * Contributing documentation would be very welcome (and is easy to do).
 * When making a pull request, please link to the issue being resolved. This makes my life much easier.
 * Making an example of how to use the component and which props the component will use would be awesome.
+
+## Generating component templates
+
+In order to generate new components, please follow the below steps:
+
+* Run the script
+  `npm run gen:c`
+* This script will ask for the component name
+  ```bash
+  $? component name please <NAME_OF_THE_COMPONENT>
+  ```
+* Once the name is provided it will generate `<COMPONENT_NAME>.jsx`, `<COMPONENT_NAME>.scss` & `<COMPONENT_NAME>.test.jsx` files in the `components` folder.
+* It's done you are ready to code.
