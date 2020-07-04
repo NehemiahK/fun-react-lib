@@ -1,20 +1,6 @@
 import React from 'react';
 import './demodisplay.css';
 /*add your demo in the import statement below */
-// import { SimpleButtonDemo, HeadingDemo, ProgressBarDemo } from '../exports/exports'
-
-// const switchTo = (componentName) => {
-//     switch (componentName) {
-//         case 'Simple Button':
-//             return <SimpleButtonDemo />
-//         case 'Heading':
-//             return <HeadingDemo />
-//         case 'Progress Bar':
-//             return <ProgressBarDemo/>
-//         default:
-//             return ''
-//     }
-// }
 
 const importView = (DemoComponentName) =>
   React.lazy(() =>

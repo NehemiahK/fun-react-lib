@@ -3,8 +3,6 @@
 import React from 'react';
 import * as library from './../';
 
-// const components = ['Simple Button', 'Heading', 'Progress Bar'];
-
 const ComponentList = (props) => {
   const urlParams = new URLSearchParams(window.location.search);
 
