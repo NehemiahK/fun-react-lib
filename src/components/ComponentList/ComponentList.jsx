@@ -1,15 +1,36 @@
-import React from 'react'
-import './componentlist.css'
-import Spinner from '../spinner/Spinner';
+import React from 'react';
+import * as library from './../';
 
 /*Add your component name to the array */
-const components = ['Simple Button', 'Heading','Spinner']
+const components = ['Simple Button', 'Heading', 'Progress Bar','Spinner'];
 
 const ComponentList = (props) => {
-    return (<div className='component-list'>
-        <h2>Components</h2>
-        {components.map(c => <button key={c} onClick={() => { props.setDemo(c) }}>{c}</button>)}
-    </div>)
-}
+  const urlParams = new URLSearchParams(window.location.search);
 
-export default ComponentList
+  const handleMenuClick = (menuName) => {
+    window.history.replaceState(null, null, `?c=${menuName}`);
+    props.setDemo(menuName);
+  };
+
+  return (
+    <section className="docs-nav">
+      <div className="docs-nav-header">
+        <span>Components</span>
+        <input type="search" placeholder="Search Component" />
+      </div>
+      <div className="docs-nav-list">
+        {Object.keys(library).map((lib) => (
+          <span
+            className={urlParams.get('c') === lib ? 'active' : ''}
+            key={lib}
+            onClick={() => handleMenuClick(lib)}
+          >
+            {lib}
+          </span>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default ComponentList;

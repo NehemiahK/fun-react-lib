@@ -7,6 +7,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "node-sass": "^4.14.1",
+    "github-markdown-css": "^4.0.0",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
@@ -18,7 +21,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,html,scss}\"",
+    "format:check": "prettier -c \"src/**/*.{js,jsx,css,html,scss}\"",
+    "gen": "plop",
+    "gen:c": "plop component"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "plop": "^2.7.1"
   }
 }

@@ -2,4 +2,7 @@
 
 export { default as SimpleButtonDemo } from '../demos/SimpleButtonDemo'
 export { default as HeadingDemo } from '../demos/HeadingDemo'
+export { default as AvatarDemo } from '../demos/AvatarDemo';
+export { default as ProgressBarDemo } from '../demos/ProgressBarDemo'
 export { default as SpinnerDemo} from '../demos/SpinnerDemo'
+
