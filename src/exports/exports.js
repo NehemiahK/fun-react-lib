@@ -2,3 +2,4 @@
 
 export { default as SimpleButtonDemo } from '../demos/SimpleButtonDemo'
 export { default as HeadingDemo } from '../demos/HeadingDemo'
+export { default as SpinnerDemo} from '../demos/SpinnerDemo'

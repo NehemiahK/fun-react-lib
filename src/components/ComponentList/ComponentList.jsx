@@ -1,8 +1,9 @@
 import React from 'react'
 import './componentlist.css'
+import Spinner from '../spinner/Spinner';
 
 /*Add your component name to the array */
-const components = ['Simple Button', 'Heading']
+const components = ['Simple Button', 'Heading','Spinner']
 
 const ComponentList = (props) => {
     return (<div className='component-list'>

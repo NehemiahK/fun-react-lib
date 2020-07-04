@@ -1,6 +1,6 @@
 import React from 'react'
 
-const switchHeading = (type, children) => {
+ const switchHeading = (type, children) => {
     switch (type) {
         case 'h1':
             return <h1>{children}</h1>
