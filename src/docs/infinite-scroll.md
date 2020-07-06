@@ -18,12 +18,13 @@ function App() {
 function myFetchFunction () {
   setIsLoading(true);
   setIsError(false);
-  setPage(page => page + 1);
+  
 
   fetch('https://myapi.com/mylist')
     .then(res => res.json())
     .then(data => {
       setList(list.concat(data));
+      setPage(page => page + 1);
       setIsLoading(false);
       setIsError(false);
     })
