@@ -1,7 +1,10 @@
-/*Add your component name to the array */
+/* Add your component name to the array */
 
 import React from 'react';
-import * as library from './../';
+
+import './ComponentList.scss';
+
+import * as library from '..';
 
 const components = ['Simple Button', 'Heading', 'Progress Bar'];
 

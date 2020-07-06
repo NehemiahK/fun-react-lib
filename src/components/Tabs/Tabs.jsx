@@ -1,5 +1,5 @@
 import React from 'react';
-import './tabs.css';
+import './Tabs.scss';
 
 export function Tabs(props) {
   const [bindIndex, setBindIndex] = React.useState(props.defaultIndex);
@@ -14,7 +14,7 @@ export function Tabs(props) {
   return (
     <section className="tbs">
       <div className="tbsMenu">
-        <span class="line" />
+        <span className="line" />
         {items.map(({ props: { name } }, index) => (
           <React.Fragment key={index}>
             <button

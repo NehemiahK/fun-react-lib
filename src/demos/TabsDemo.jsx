@@ -15,7 +15,7 @@ const TabsDemo = () => {
   });
 
   return (
-    <React.Fragment>
+    <>
       <ReactMarkdown source={markdown} />
       <br />
       <Tabs defaultIndex={0} onTabClick={console.log}>
@@ -32,7 +32,7 @@ const TabsDemo = () => {
           <p>Tokyo is the capital of Japan.</p>
         </Tabs.Tab>
       </Tabs>
-    </React.Fragment>
+    </>
   );
 };
 

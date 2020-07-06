@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Heading from '../components/Heading/Heading';
 import ReactMarkdown from 'react-markdown';
+import Heading from '../components/Heading/Heading';
 import simpleButtonPath from '../docs/heading.md';
 
 const HeadingDemo = () => {

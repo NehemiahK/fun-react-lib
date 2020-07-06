@@ -1,5 +1,5 @@
 import React from 'react';
-import './radiobutton.css';
+import './RadioButton.scss';
 
 const RadioButton = (props) => {
   const { checked, value, name, onChange, children, disabled } = props;

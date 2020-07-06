@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '../components/Avatar/Avatar';
 import ReactMarkdown from 'react-markdown';
+import Avatar from '../components/Avatar/Avatar';
 import avatarPath from '../docs/avatar.md';
 
 const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];

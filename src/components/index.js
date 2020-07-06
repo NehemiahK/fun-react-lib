@@ -1,4 +1,4 @@
-/*export your component */
+/* export your component */
 
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Heading } from './Heading/Heading';

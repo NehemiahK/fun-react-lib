@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SimpleButton from '../components/SimpleButton/SimpleButton';
 import ReactMarkdown from 'react-markdown';
+import SimpleButton from '../components/SimpleButton/SimpleButton';
 import simpleButtonPath from '../docs/simple-button.md';
 
 const SimpleButtonDemo = () => {

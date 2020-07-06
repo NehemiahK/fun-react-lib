@@ -75,7 +75,7 @@ const InfiniteScrollDemo = () => {
   });
 
   return (
-    <React.Fragment>
+    <>
       <ReactMarkdown source={markdown} />
       <div>
         <h2>My User List</h2>
@@ -101,7 +101,7 @@ const InfiniteScrollDemo = () => {
           })}
         </InfiniteScroll>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

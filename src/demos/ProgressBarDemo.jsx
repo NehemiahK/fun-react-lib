@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ProgressBar from '../components/ProgressBar/ProgressBar';
 import ReactMarkdown from 'react-markdown';
+import ProgressBar from '../components/ProgressBar/ProgressBar';
 import simpleButtonPath from '../docs/progressbar.md';
 
 const ProgressBarDemo = () => {
