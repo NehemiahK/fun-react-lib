@@ -1,39 +1,24 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Modal.scss';
 
-const Modal = forwardRef((props, ref) => {
-  const [display, setDisplay] = useState(props.isOpen);
-
-  useImperativeHandle(ref, () => {
-    return {
-      openModal: () => open(),
-      closeModal: () => close(),
-    };
-  });
-
-  const open = () => {
-    setDisplay(true);
-  };
-
-  const close = () => {
-    setDisplay(false);
-  };
-
-  if (display) {
+const Modal = (props) => {
+  if (props.isOpen) {
     return (
-      <div className="modal-wrapper">
-        <div className="modal-backdrop" onClick={close} />
-        <div className="modal-box">{props.children}</div>
+      <div className="modal__wrapper">
+        <div className="modal__backdrop" />
+        <div className="modal__box">{props.children}</div>
       </div>
     );
   }
   return null;
-});
+};
 
 export default Modal;
 
 Modal.propTypes = {
-  isOpen: Boolean,
+  isOpen: PropTypes.bool,
 };
 
 Modal.defaultProps = {

@@ -1,28 +1,27 @@
 ## Usage
 
 ```
-import React, { useRef } from 'react';
-import '../components/Modal/Modal.scss';
-
+import React, { useState } from 'react';
 import Modal from '../components/Modal/Modal';
 
 function App() {
-  const modalRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => {
-    modalRef.current.openModal();
+  const closeModalHandler = () => {
+    setIsOpen(false);
+  };
+
+  const openModalHandler = () => {
+    setIsOpen(true);
   };
 
   return (
     <div className="App">
-      <button className="modal.btn-open" onClick={openModal}>
+      <button className="modal__btn-open" onClick={openModalHandler}>
         Open Modal
       </button>
-      <Modal ref={modalRef}>
-        <button
-          className="modal.btn-close"
-          onClick={() => modalRef.current.closeModal()}
-        >
+      <Modal isOpen={isOpen}>
+        <button className="modal__btn-close" onClick={closeModalHandler}>
           Close
         </button>
         <h1>Modal Header</h1>
@@ -44,13 +43,12 @@ function App() {
 }
 
 export default App;
-
 ```
 
 ### Properties
 
-| Property | Type    | Required | Default value | Description                           |
-| :------- | :------ | :------- | :------------ | :------------------------------------ |
-| `isOpen` | Boolean | no       | false         | set to true if the modal is displayed |
+| Property | Type    | Required | Default value | Description                                 |
+| :------- | :------ | :------- | :------------ | :------------------------------------------ |
+| `isOpen` | Boolean | yes      | none          | set to true if the modal is to be displayed |
 
 ### Sample
