@@ -1,19 +1,18 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* Add your component name to the array */
-
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './ComponentList.scss';
 
 import * as library from '..';
 
-const components = ['Simple Button', 'Heading', 'Progress Bar'];
-
-const ComponentList = (props) => {
+const ComponentList = ({ setDemo }) => {
   const urlParams = new URLSearchParams(window.location.search);
 
   const handleMenuClick = (menuName) => {
     window.history.replaceState(null, null, `?c=${menuName}`);
-    props.setDemo(menuName);
+    setDemo(menuName);
   };
 
   return (
@@ -28,6 +27,7 @@ const ComponentList = (props) => {
             className={urlParams.get('c') === lib ? 'active' : ''}
             key={lib}
             onClick={() => handleMenuClick(lib)}
+            onKeyUp={() => handleMenuClick(lib)}
           >
             {lib}
           </span>
@@ -35,6 +35,10 @@ const ComponentList = (props) => {
       </div>
     </section>
   );
+};
+
+ComponentList.propTypes = {
+  setDemo: PropTypes.func.isRequired,
 };
 
 export default ComponentList;
