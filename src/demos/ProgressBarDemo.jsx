@@ -25,6 +25,7 @@ const ProgressBarDemo = () => {
       <ReactMarkdown source={markdown} />
       {testData.map((item, idx) => (
         <ProgressBar
+          // eslint-disable-next-line react/no-array-index-key
           key={idx}
           bgColor={item.bgColor}
           completed={item.completed}
