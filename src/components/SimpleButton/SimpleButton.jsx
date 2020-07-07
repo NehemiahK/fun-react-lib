@@ -1,20 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './SimpleButton.scss';
 
-const SimpleButton = (props) => {
+const SimpleButton = ({ color, size, onClick, children }) => {
   return (
     <button
-      className={`simple-button ${props.color} ${props.size}`}
-      onClick={props.onClick}
+      className={`simple-button ${color} ${size}`}
+      onClick={onClick}
+      type="button"
     >
-      {props.children}
+      {children}
     </button>
   );
 };
 
+SimpleButton.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.string,
+};
+
 SimpleButton.defaultProps = {
   color: 'red',
-  onClick: () => {},
   children: 'Click here',
   size: 'sm',
 };
