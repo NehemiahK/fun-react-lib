@@ -30,7 +30,7 @@ const useFetchUsers = (initialState) => {
     getUsers(page, 10)
       .then((res) => {
         if (!cancel) {
-          setData((data) => data.concat(res));
+          setData(() => data.concat(res));
           setIsLoading(false);
           setIsError(false);
           setHasMore(true);
@@ -91,6 +91,7 @@ const InfiniteScrollDemo = () => {
         >
           {data.map((d, i) => {
             return (
+              // eslint-disable-next-line react/no-array-index-key
               <div key={i}>
                 <h3>{`${d.name.title}. ${d.name.first} ${d.name.last}`}</h3>
                 <p>
