@@ -17,7 +17,7 @@ const HeadingDemo = () => {
   return (
     <>
       <ReactMarkdown source={markdown} />
-      <Heading type="h3"> I'm an h3 header </Heading>
+      <Heading type="h3"> I&apos;m an h3 header </Heading>
     </>
   );
 };
