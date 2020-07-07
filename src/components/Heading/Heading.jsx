@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 const switchHeading = (type, children) => {
   switch (type) {
     case 'h1':
@@ -15,16 +17,25 @@ const switchHeading = (type, children) => {
     case 'h6':
       return <h6>{children}</h6>;
     default:
-    // do nothing
+      return <h2>{children}</h2>;
   }
 };
 
-const Heading = (props) => {
-  return <>{switchHeading(props.type, props.children)}</>;
+const Heading = ({ type, children }) => {
+  return <>{switchHeading(type, children)}</>;
+};
+
+Heading.propTypes = {
+  type: PropTypes.oneOfType(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node).isRequired,
+  ]),
 };
 
 Heading.defaultProps = {
   type: 'h2',
+  children: '',
 };
 
 export default Heading;

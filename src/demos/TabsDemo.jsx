@@ -15,9 +15,10 @@ const TabsDemo = () => {
   });
 
   return (
-    <React.Fragment>
+    <>
       <ReactMarkdown source={markdown} />
       <br />
+      {/* eslint-disable-next-line no-console */}
       <Tabs defaultIndex={0} onTabClick={console.log}>
         <Tabs.Tab name="London">
           <h3>London</h3>
@@ -32,7 +33,7 @@ const TabsDemo = () => {
           <p>Tokyo is the capital of Japan.</p>
         </Tabs.Tab>
       </Tabs>
-    </React.Fragment>
+    </>
   );
 };
 
