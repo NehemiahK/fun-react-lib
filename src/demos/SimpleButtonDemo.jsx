@@ -15,6 +15,7 @@ const SimpleButtonDemo = () => {
   });
 
   const handleClick = () => {
+    // eslint-disable-next-line no-alert
     alert('Button Clicked');
   };
 
