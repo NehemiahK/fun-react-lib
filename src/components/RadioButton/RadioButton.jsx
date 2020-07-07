@@ -1,8 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './RadioButton.scss';
 
-const RadioButton = (props) => {
-  const { checked, value, name, onChange, children, disabled } = props;
+const RadioButton = ({
+  checked,
+  value,
+  name,
+  onChange,
+  children,
+  disabled,
+}) => {
   return (
     <div className="radio-button">
       <input
@@ -17,6 +25,18 @@ const RadioButton = (props) => {
       <label htmlFor={name}>{children}</label>
     </div>
   );
+};
+
+RadioButton.propTypes = {
+  checked: PropTypes.bool,
+  value: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]),
+  disabled: PropTypes.bool,
 };
 
 RadioButton.defaultProps = {
