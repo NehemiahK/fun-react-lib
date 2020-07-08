@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Avatar from '../components/Avatar/Avatar';
+
 import ReactMarkdown from 'react-markdown';
+import Avatar from '../components/Avatar/Avatar';
 import avatarPath from '../docs/avatar.md';
 
 const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
@@ -9,7 +10,6 @@ const AvatarDemo = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    console.log('AvatarDemo component');
     fetch(avatarPath)
       .then((response) => response.text())
       .then((text) => {

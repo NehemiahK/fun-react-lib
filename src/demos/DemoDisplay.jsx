@@ -1,48 +1,24 @@
-import React from 'react';
-import './demodisplay.css';
-/*add your demo in the import statement below */
-import {
-  SimpleButtonDemo,
-  HeadingDemo,
-  ProgressBarDemo,
-  ModalDemo,
-} from '../exports/exports';
-
-const switchTo = (componentName) => {
-  switch (componentName) {
-    case 'Simple Button':
-      return <SimpleButtonDemo />;
-    case 'Heading':
-      return <HeadingDemo />;
-    case 'Progress Bar':
-      return <ProgressBarDemo />;
-    case 'Modal':
-      return <ModalDemo />;
-    default:
-      return '';
-  }
-};
 
 const importView = (DemoComponentName) =>
   React.lazy(() =>
     import(`./${DemoComponentName}`).catch((e) =>
-      console.log('demo component not exported')
+      console.error('demo component not exported', e)
     )
   );
 
-const DemoDisplay = (props) => {
+const DemoDisplay = ({ demo }) => {
   const [views, setViews] = React.useState();
 
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const comp = props.demo ? props.demo : urlParams.get('c');
+    const comp = demo || urlParams.get('c');
     console.log(`${comp}Demo`);
     async function loadViews() {
       const View = await importView(`${comp}Demo`);
       setViews(<View />);
     }
     loadViews();
-  }, [props.demo]);
+  }, [demo]);
 
   return (
     <React.Suspense
@@ -55,6 +31,11 @@ const DemoDisplay = (props) => {
       <div className="docs-content markdown-body">{views}</div>
     </React.Suspense>
   );
+};
+
+DemoDisplay.propTypes = {
+  demo: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)])
+    .isRequired,
 };
 
 export default DemoDisplay;

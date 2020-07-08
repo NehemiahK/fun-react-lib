@@ -30,7 +30,7 @@ const useFetchUsers = (initialState) => {
     getUsers(page, 10)
       .then((res) => {
         if (!cancel) {
-          setData((data) => data.concat(res));
+          setData(() => data.concat(res));
           setIsLoading(false);
           setIsError(false);
           setHasMore(true);
@@ -44,6 +44,7 @@ const useFetchUsers = (initialState) => {
     return () => {
       cancel = true;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   return {
@@ -75,7 +76,7 @@ const InfiniteScrollDemo = () => {
   });
 
   return (
-    <React.Fragment>
+    <>
       <ReactMarkdown source={markdown} />
       <div>
         <h2>My User List</h2>
@@ -91,6 +92,7 @@ const InfiniteScrollDemo = () => {
         >
           {data.map((d, i) => {
             return (
+              // eslint-disable-next-line react/no-array-index-key
               <div key={i}>
                 <h3>{`${d.name.title}. ${d.name.first} ${d.name.last}`}</h3>
                 <p>
@@ -101,7 +103,7 @@ const InfiniteScrollDemo = () => {
           })}
         </InfiniteScroll>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
