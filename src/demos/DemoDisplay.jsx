@@ -1,8 +1,3 @@
-/* eslint-disable no-console */
-import React from 'react';
-import PropTypes from 'prop-types';
-
-import './DemoDisplay.scss';
 
 const importView = (DemoComponentName) =>
   React.lazy(() =>
