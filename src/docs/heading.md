@@ -19,6 +19,6 @@ export default App;
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
-`children`|children|no|empty| Text/children of heading
-`type`|string|no|h2| h1,h2,h3,h4,h5,h6
+`title`|string|yes|Title| The title that you want to put.
+`body`|string|yes|Body| Body of the card
 
