@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&family=Open+Sans&display=swap');
+
+.card {
+  width: 60vw;
+  background: whitesmoke;
+  padding: 1rem 1.5rem 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 1px solid #6b6b6b;
+}
+
+.card h2 {
+  font-family: 'Headland One', serif;
+  margin-bottom: 0;
+  border: none;
+}
+
+.card p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.separator {
+  border: 0.5px solid rgba(66, 66, 66, 0.438);
+  width: 60%;
+  margin: 1rem 0 1rem 0;
+}
