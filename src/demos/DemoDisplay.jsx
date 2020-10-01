@@ -13,6 +13,7 @@ const importView = (DemoComponentName) =>
 
 const DemoDisplay = ({ demo }) => {
   const [views, setViews] = React.useState();
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,13 +24,14 @@ const DemoDisplay = ({ demo }) => {
       setViews(<View />);
     }
     loadViews();
+    setLoading(false)
   }, [demo]);
 
   return (
     <React.Suspense
       fallback={
         <div className="loadWrapper">
-          <div className="loader" />
+          {loading && loading === true ? <div className="loader" /> : null}
         </div>
       }
     >
